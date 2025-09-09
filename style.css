@@ -1,0 +1,81 @@
+:root{
+  --page-bg:#1A1A1A;
+  --text:#EAEAEA;
+  --heading:#FFFFFF;
+  --cta:#FFC907;
+  --cta-hover:#e6b51e;
+  --card:#BF6C46;
+  --white-veil: rgba(255,255,255,.08);
+  --radius:12px;
+  --shadow:0 10px 24px rgba(0,0,0,.22);
+}
+
+*{box-sizing:border-box}
+body{margin:0; font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; color:var(--text); background:var(--page-bg)}
+img{max-width:100%; display:block; height:auto}
+a{color:inherit}
+
+.wrap{max-width:1100px; margin:0 auto; padding:24px 18px 64px}
+
+header, .site-header{display:flex; align-items:center; gap:12px; margin-bottom:20px}
+.logo-mark{width:40px; height:40px; border-radius:8px; background:var(--cta); display:inline-flex; align-items:center; justify-content:center; font-weight:800; color:#212121; box-shadow: inset 0 2px 0 rgba(0,0,0,.15)}
+.brand{font-weight:700; letter-spacing:.06em; font-size:clamp(24px,3.2vw,40px); color:var(--heading)}
+.brand i{font-style:normal; opacity:.9}
+
+.hero{display:grid; gap:22px}
+.hero-media{border-radius:8px; overflow:hidden; box-shadow:var(--shadow); background:var(--page-bg)}
+.hero-copy{background:var(--white-veil); padding:16px 18px; border-radius:var(--radius)}
+.hero-copy p{margin:0 0 12px}
+
+.cta{display:inline-block; background:var(--cta); color:#1a1a1a; text-decoration:none; padding:14px 18px; font-weight:700; border-radius:10px; box-shadow:0 8px 18px rgba(0,0,0,.18); transition: transform 0.2s ease, background 0.2s ease}
+.cta:hover{background:var(--cta-hover); transform: scale(1.05)}
+.cta:focus{outline:3px solid #000; outline-offset:3px}
+
+.pay-options{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
+.pay-btn{display:inline-flex; align-items:center; gap:10px; padding:10px 12px; background:#fff; color:#111; border:1px solid rgba(0,0,0,.15); border-radius:10px; text-decoration:none; font-weight:600; box-shadow:0 2px 6px rgba(0,0,0,.12); transition: transform .15s ease, box-shadow .2s ease, background .2s ease}
+.pay-btn:hover{transform: translateY(-1px); box-shadow:0 6px 14px rgba(0,0,0,.18); background:#fdf8df}
+.pay-logo{width:22px; height:auto; display:block}
+
+.bottom{display:grid; gap:22px; margin-top:28px}
+.promo-card{background:var(--card); color:#fff; font-weight:700; text-align:center; padding:24px 18px; border-radius:12px; box-shadow:0 18px 30px rgba(0,0,0,.32); transition: box-shadow 0.3s ease}
+.promo-card:hover{box-shadow:0 24px 40px rgba(0,0,0,.45)}
+.assurance{background:var(--white-veil); padding:18px; border-radius:var(--radius); transition: box-shadow .3s ease; color:#fff}
+.assurance:hover{box-shadow:0 12px 26px rgba(0,0,0,.24)}
+
+footer{background:var(--page-bg); padding:24px 18px; text-align:center; color:var(--heading); font-size:14px; border-top:2px solid rgba(255,255,255,.1)}
+footer .footer-cta{margin:16px 0}
+footer .social-links{margin:12px 0; display:flex; justify-content:center; gap:18px}
+footer .social-links a{display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:#fff; box-shadow:0 4px 8px rgba(0,0,0,.2); transition: transform 0.2s ease}
+footer .social-links a:hover{transform:scale(1.1); background:#fdf8df}
+.social-logo{width:22px; height:auto; display:block}
+
+/* Small screens: wrap footer icons nicely */
+@media (max-width:399px){
+  footer .social-links { flex-wrap: wrap; justify-content: center; gap: 12px; }
+  footer .social-links a { width: 40px; height: 40px; }
+  footer .social-logo { width: 24px; }
+}
+
+/* Tablet layout */
+@media (min-width:600px) and (max-width:899px){
+  .hero, .bottom { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .hero-copy, .assurance { font-size: 1rem; padding: 20px; }
+  .promo-card { font-size: 1.1rem; padding: 20px; }
+  .cta { font-size: 1rem; padding: 12px 16px; }
+  .pay-options { flex-direction: column; gap: 12px; }
+  .pay-btn { justify-content: center; font-size: 0.95rem; padding: 12px; }
+  .pay-logo { width: 20px; }
+  footer .social-links { gap: 24px; }
+  footer .social-links a { width: 44px; height: 44px; }
+  footer .social-logo { width: 26px; }
+}
+
+/* Desktop layout */
+@media (min-width:900px){
+  .hero{grid-template-columns:1.1fr 1fr; align-items:start}
+  .bottom{grid-template-columns:1fr 1.1fr; align-items:start}
+  .promo-card{width:78%}
+  .assurance{justify-self:end}
+}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

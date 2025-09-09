@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>charity: water — Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.cdnfonts.com/css/proxima-nova" rel="stylesheet">
+  <style>
+    body { font-family: 'Proxima Nova', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <!-- Updated Header with Mobile Menu -->
+    <header class="site-header" aria-label="charity: water">
+      <div class="brand-wrap">
+        <div class="logo-mark" aria-hidden="true">⛲</div>
+        <div class="brand"><i>charity:</i> water</div>
+      </div>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true" />
+      <label for="menu-toggle" class="hamburger" aria-label="Toggle menu" role="button" aria-controls="primary-nav" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav id="primary-nav" class="nav" aria-label="Primary">
+        <a href="#impact">Our Impact</a>
+        <a href="#projects">Projects</a>
+        <a href="#donate">Donate</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <figure class="hero-media">
+        <img src="https://picsum.photos/1200/800?random=42" alt="Community gathered together outside their home" />
+      </figure>
+
+      <div class="hero-copy">
+        <h1 id="hero-title" class="sr-only">Give Clean Water. Know Your Impact.</h1>
+        <p>For communities around the world without access to clean drinking water, charity: water funds sustainable water solutions, bringing clean and safe water to people in need.</p>
+        <p><strong>100% of public donations go directly</strong> to water projects, with private donors covering operating costs, and every project is tracked and reported for transparency.</p>
+        <p><a class="cta" href="#donate">Give Clean Water. Know Your Impact.</a></p>
+
+        <div class="pay-options" aria-label="Donate with a digital wallet">
+          <a class="pay-btn" href="#apple-pay"><img class="pay-logo" src="assets/apple-pay.svg" alt="Apple Pay" />Apple Pay</a>
+          <a class="pay-btn" href="#google-pay"><img class="pay-logo" src="assets/google-pay.svg" alt="Google Pay" />Google Pay</a>
+          <a class="pay-btn" href="#samsung-pay"><img class="pay-logo" src="assets/samsung-pay.svg" alt="Samsung Pay" />Samsung Pay</a>
+          <a class="pay-btn" href="#venmo"><img class="pay-logo" src="assets/venmo.svg" alt="Venmo" />Venmo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom">
+      <div class="promo-card">Donate in seconds, change<br> a life.</div>
+      <p class="assurance">Every dollar goes straight to water projects, tracked and shared with you — making it easy to give anytime, anywhere with total confidence.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 charity: water. All rights reserved.</p>
+    <div class="footer-cta">
+      <a href="#newsletter" class="cta">Join Our Newsletter</a>
+    </div>
+    <div class="social-links">
+      <a href="#"><img class="social-logo" src="assets/facebook.svg" alt="Facebook" /></a>
+      <a href="#"><img class="social-logo" src="assets/x.svg" alt="X" /></a>
+      <a href="#"><img class="social-logo" src="assets/instagram.svg" alt="Instagram" /></a>
+      <a href="#"><img class="social-logo" src="assets/linkedin.svg" alt="LinkedIn" /></a>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Styles (kept inline for self-containment) -->
+  <style>
+    .site-header{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:20px}
+    .brand-wrap{display:flex; align-items:center; gap:12px}
+    .menu-toggle{position:absolute; left:-9999px}
+    .hamburger{width:40px; height:40px; display:flex; flex-direction:column; justify-content:center; gap:6px; padding:8px; border-radius:10px; cursor:pointer; background:var(--white-veil); box-shadow:0 2px 8px rgba(0,0,0,.15)}
+    .hamburger span{display:block; height:2px; background:#fff; border-radius:2px}
+    .nav{display:flex; gap:16px}
+    .nav a{color:#fff; text-decoration:none; font-weight:600; padding:8px 10px; border-radius:8px}
+    .nav a:hover{background:rgba(255,255,255,.08)}
+    @media (max-width:899px){
+      .nav{position:absolute; top:64px; left:18px; right:18px; background:rgba(0,0,0,.55); backdrop-filter:saturate(140%) blur(6px); border:1px solid rgba(255,255,255,.12); border-radius:12px; box-shadow:0 16px 36px rgba(0,0,0,.45); padding:12px; display:none; flex-direction:column}
+      .menu-toggle:checked ~ .nav{display:flex}
+      .hamburger{z-index:2}
+      .menu-toggle:checked + .hamburger span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+      .menu-toggle:checked + .hamburger span:nth-child(2){opacity:0}
+      .menu-toggle:checked + .hamburger span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+      .hamburger span{transition:transform .2s ease, opacity .2s ease}
+    }
+    @media (min-width:900px){
+      .hamburger{display:none}
+    }
+  </style>
+</body>
+</html>
