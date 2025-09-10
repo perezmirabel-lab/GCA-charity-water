@@ -3,7 +3,7 @@
 A simple, beginner-friendly landing page based on your Canva design. Built with **HTML + CSS only**, using your brand colors and Proxima Nova.
 
 ## 🎨 Brand Settings
-- Background: `#1A1A1A`
+- Background: `#77A8BB`
 - Warm brown (promo card): `#BF6C46`
 - Yellow (CTA + accents): `#FFC907`
 - Font: **Proxima Nova** via CDN
